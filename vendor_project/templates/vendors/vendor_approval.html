@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Vendor Approval - {{ vendor.name }}</h2>
+    <div class="vendor-details mb-4">
+        <p>Email: {{ vendor.email }}</p>
+        <p>Contact: {{ vendor.contact_number }}</p>
+        
+        <p>Services: {% for service in vendor.services_offered.all %}{{ service.name }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+        <p>Documents: <a href="{{ vendor.documents.url }}" target="_blank">View Documents</a></p>
+    </div>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit Decision</button>
+    </form>
+</div>
+{% endblock %}

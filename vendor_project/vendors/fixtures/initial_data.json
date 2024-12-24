@@ -1,0 +1,38 @@
+[
+  {
+    "model": "vendors.servicetype",
+    "pk": 1,
+    "fields": {
+      "name": "IT Services",
+      "schema_fields": [
+        { "name": "tech_stack", "type": "TEXT" },
+        { "name": "experience_years", "type": "INTEGER" },
+        { "name": "certifications", "type": "TEXT" }
+      ]
+    }
+  },
+  {
+    "model": "vendors.servicetype",
+    "pk": 2,
+    "fields": {
+      "name": "Logistics",
+      "schema_fields": [
+        { "name": "transport_type", "type": "TEXT" },
+        { "name": "fleet_size", "type": "INTEGER" },
+        { "name": "coverage_area", "type": "TEXT" }
+      ]
+    }
+  },
+  {
+    "model": "vendors.servicetype",
+    "pk": 3,
+    "fields": {
+      "name": "Consulting",
+      "schema_fields": [
+        { "name": "specialization", "type": "TEXT" },
+        { "name": "team_size", "type": "INTEGER" },
+        { "name": "industry_focus", "type": "TEXT" }
+      ]
+    }
+  }
+]
